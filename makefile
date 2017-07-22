@@ -2,7 +2,7 @@ SRCDIR = src/
 BINDIR = bin/
 GCC    = g++
 TARGET = $(BINDIR)lsys
-CFLAGS = 
+CFLAGS = -std=c++11
 
 .phony: all
 all: build
@@ -13,7 +13,7 @@ build: $(BINDIR) $(TARGET)
 $(BINDIR):
 	mkdir $@
 
-$(TARGET): $(SRCDIR)lsys.cpp $(SRCDIR)lsys.hpp $(SRCDIR)config.hpp
+$(TARGET): $(SRCDIR)lsys.cpp $(SRCDIR)lsys.hpp
 	$(GCC) $(CFLAGS) $< -o $@
 
 .phony: run

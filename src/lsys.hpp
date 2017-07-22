@@ -1,7 +1,8 @@
 #include "config.hpp"
 
-#define A "A"
-#define B "B"
+#define RULE "expand"
+#define REPLACE "replace"
+#define AXIOM "axiom"
+#define GENERATION "generations"
 
-#define OP "["
-#define CP "]"
+#define DEF_config_file "config.cfg"
