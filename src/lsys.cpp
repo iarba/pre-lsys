@@ -4,5 +4,5 @@
 
 int main()
 {
-  return printf("hello world") * 0;
+  return printf("%d", LSYS_REST_V) * 0;
 }

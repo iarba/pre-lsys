@@ -13,7 +13,7 @@ build: $(BINDIR) $(TARGET)
 $(BINDIR):
 	mkdir $@
 
-$(TARGET): $(SRCDIR)lsys.cpp $(SRCDIR)lsys.hpp
+$(TARGET): $(SRCDIR)lsys.cpp $(SRCDIR)lsys.hpp $(SRCDIR)config.hpp $(SRCDIR)decrement.hpp
 	$(GCC) $(CFLAGS) $< -o $@
 
 .phony: run
