@@ -36,6 +36,18 @@ void load_rules(char* file, string *rules, string *replacement, string *axiom, i
   fclose(f);
 }
 
+string expand(int gen, string source, string *rules, string *replacement)
+{
+  int i;
+  string ns;
+  for(ns = ""; gen; gen--, source = ns, ns = "")
+  {
+    for(i = 0; i < source.length(); ns += rules[source[i++]]);
+  }
+  for(i = 0; i < source.length(); ns += replacement[source[i++]]);
+  return ns;
+}
+
 int main(int argc, char **argv)
 {
   int i, generations;
@@ -53,7 +65,7 @@ int main(int argc, char **argv)
     file = argv[2];
   }
   load_rules(file, rules, replacement, &axiom, &generations);
-//  cout << expand(generations, axiom) << "\n";
+  cout << expand(generations, axiom, rules, replacement) << "\n";
   delete[] rules;
   return 0;
 }
