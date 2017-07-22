@@ -2,7 +2,7 @@ SRCDIR = src/
 BINDIR = bin/
 GCC    = g++
 TARGET = $(BINDIR)lsys
-CFLAGS = -std=c++11
+CFLAGS = -std=c++11 -Wall
 
 .phony: all
 all: build
