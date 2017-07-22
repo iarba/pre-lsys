@@ -1,0 +1,8 @@
+# binaries
+/bin
+# hidden files
+.*
+# except gitignore
+!.gitignore
+# backup files
+*~
